@@ -19,3 +19,9 @@
 [题目详情](https://leetcode-cn.com/problems/longest-common-prefix)
 
 # 解题思路
+
+## 暴力法
+
+1. 实现一个函数，判断某个字符串中是否存在指定子字符串
+2. 将最小的元素进行遍历 比如上述例子 对 'flow' 进行处理
+3. 则应该遍历 f fl flo flow l lo low o ow w 等这些情况 注意 上述这些是递进 比如 当没有 `fl` 时，则不必遍历  `flo` `flow` 直接进行 `l` 的遍历

@@ -1,29 +1,9 @@
-package main
-
-import (
-  "fmt"
-  // "strings"
-)
-
-func main () {
-  var str = []string{"flower", "flow", "fla"}
-
-  fmt.Println(longestCommonPrefix(str))
-
-  // for i:= 0; i < 2; i++ {
-  //   for j := 0; j < 3 - 1; j++ {
-  //     if i == 0 {
-  //       break
-  //     }
-  //     fmt.Println("hello")
-  //   }
-  // }
-}
 
 func longestCommonPrefix(strs []string) string {
   if len(strs) == 0 {
     return ""
-  }
+	}
+	// 寻找最小长度的string
   minLen := 10000
   for i := 0; i < len(strs); i++ {
     if len(strs[i]) < minLen {
@@ -43,6 +23,7 @@ func longestCommonPrefix(strs []string) string {
         }
       }
     }
-  }
+	}
+	// 假如都一样
   return strs[0][:minLen]
 }
